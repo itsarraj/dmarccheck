@@ -1,0 +1,25 @@
+[package]
+name = "dmarccheck"
+version = "0.1.0"
+edition = "2021"
+description = "Validates a domain's SPF, DKIM, and DMARC DNS records are present and correctly formed — the proactive setup-time counterpart to this workspace's mailtrace"
+license = "MIT"
+authors = ["Animesh Raj <animesh080808@gmail.com>"]
+repository = "https://github.com/itsarraj/dmarccheck"
+readme = "README.md"
+keywords = ["dns", "spf", "dkim", "dmarc", "email"]
+categories = ["command-line-utilities"]
+
+[lib]
+name = "dmarccheck"
+path = "src/lib.rs"
+
+[[bin]]
+name = "dmarccheck"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
+tokio = { version = "1", features = ["full"] }
+hickory-resolver = "0.24"
