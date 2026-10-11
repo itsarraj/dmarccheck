@@ -7,6 +7,12 @@ headers after the fact. This checks the DNS side before you send
 anything: is SPF published and syntactically sane, is DMARC published
 with a real policy, does a given DKIM selector actually resolve to a key.
 
+## Installation
+
+```sh
+cargo install --path .
+```
+
 ## Usage
 
 ```bash
